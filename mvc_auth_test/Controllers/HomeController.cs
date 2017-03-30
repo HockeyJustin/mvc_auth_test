@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace mvc_auth_test.Controllers
 {
+
 	public class HomeController : Controller
 	{
 		public ActionResult Index()
@@ -20,6 +21,7 @@ namespace mvc_auth_test.Controllers
 			return View();
 		}
 
+		[Authorize]
 		public ActionResult Contact()
 		{
 			ViewBag.Message = "Your contact page.";
